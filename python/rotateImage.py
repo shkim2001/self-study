@@ -4,7 +4,12 @@ class Solution(object):
         :type matrix: List[List[int]]
         :rtype: None Do not return anything, modify matrix in-place instead.
         """
-        j = 0
-        for i in zip(*matrix):
-            matrix[j] = i[::-1]
-            j+=1
+        
+        n = len(matrix[0])
+        for i in range(n // 2 + n % 2):
+            for j in range(n // 2):
+                tmp = matrix[n - 1 - j][i]
+                matrix[n - 1 - j][i] = matrix[n - 1 - i][n - j - 1]
+                matrix[n - 1 - i][n - j - 1] = matrix[j][n - 1 -i]
+                matrix[j][n - 1 - i] = matrix[i][j]
+                matrix[i][j] = tmp
