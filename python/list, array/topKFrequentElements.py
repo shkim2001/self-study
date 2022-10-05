@@ -14,9 +14,9 @@ class Solution:
             count[num] += 1
         
         for num, freq in count.items():
-            heappush(minHeap, [-freq, num])
+            heapq.heappush(minHeap, [-freq, num])
         
         for i in range(k):
-            result.append(heappop(minHeap)[1])
+            result.append(heapq.heappop(minHeap)[1])
             
         return result
