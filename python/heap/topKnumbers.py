@@ -14,7 +14,7 @@ def find_k_largest_numbers(nums, k):
   
   return minHeap
 
-  # O(logn) solution
+  # O(nlogn) solution
   # result = []
   # nums = sorted(nums)[::-1]
   # for i in range(k):
