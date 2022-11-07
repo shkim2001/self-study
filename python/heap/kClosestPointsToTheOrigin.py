@@ -41,3 +41,31 @@ def main():
 main()
 
 
+# class Solution:
+#     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+#         minHeap = []
+#         res = []
+#         for point in points:
+#             dist = math.sqrt((point[0] * point[0]) + (point[1] * point[1]))
+#             heapq.heappush(minHeap, (-dist, point))
+#             if len(minHeap) > k:
+#                 heapq.heappop(minHeap)
+        
+#         for i in range(k):
+#             res.append(heapq.heappop(minHeap)[1])
+#         return res
+            
+
+# #         points.sort(key = lambda P: P[0]**2 + P[1]**2)
+# #         return points[:k]   
+# # #         lst = []
+# # #         res = []
+# # #         for i in range(len(points)):
+# # #             dist = sqrt(points[i][0]**2 + points[i][1]**2)
+# # #             lst.append([dist, points[i]])
+# # #             lst = sorted(lst)
+        
+# # #         for j in range(k):
+# # #             res.append(lst[j][1])
+            
+# # #         return res
